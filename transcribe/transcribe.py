@@ -20,9 +20,9 @@
 
 # import high-level pipeline 
 import setup
-from transformers import pipeline
 from recordings.audio_file_path import audio_file_path
+from transformers import pipeline
 
 # This line will load your desired model
-# pipe = pipeline("automatic-speech-recognition", model="thennal/whisper-medium-ml")
-# print(pipe(audio_file_path,max_new_tokens=100, chunk_length_s=10)) # will get a transcribed output as a text
+pipe = pipeline("automatic-speech-recognition", model="thennal/whisper-medium-ml")
+print(pipe(audio_file_path,max_new_tokens=100, chunk_length_s=10)) # will get a transcribed output as a text
