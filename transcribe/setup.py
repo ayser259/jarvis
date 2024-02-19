@@ -1,4 +1,5 @@
 import os
+from helpers import save_file
 
 current_directory = os.getcwd()
 
@@ -12,9 +13,7 @@ if not os.path.exists('recordings/audio_file_path.py'):
     audio_file_path = current_directory + '/recordings/' + audio_file_path 
     file_name = 'recordings/audio_file_path.py'
 
-    f = open(file_name, 'a+')  # open file in append mode
-    f.write("audio_file_path = ' " + audio_file_path+ "'")
-    f.close()
+    save_file(file_name,"audio_file_path = '" + audio_file_path + "'")
     print('created audio_file_path')
 
     print("Copy over any recordings you want to transcribe into the 'Recordings' folder and then update the name of the file you want to transcribe in the audio file path folder.")
