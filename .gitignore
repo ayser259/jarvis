@@ -150,6 +150,7 @@ cython_debug/
 # private local files
 /transcribe/recordings
 /transcribe/transcripts
+/transcribe/keys.py
 
 # PyCharm
 #  JetBrains specific template is maintainted in a separate JetBrains.gitignore that can
